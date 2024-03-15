@@ -1,0 +1,52 @@
+.employee-container
+{
+    display: flex;
+    width: 100%;
+    height: 90.5vh;
+    
+}
+.employee-sidebar
+{
+    width: 22%;
+    display: flex;
+    box-shadow: rgba(57, 57, 63, 0.2) 0px 7px 29px 0px;
+    justify-content: center;
+    align-items: center;
+    background-color:rgb(220, 220, 220);
+}
+.employee-header th
+{
+    cursor: pointer;
+    color: white;
+    position: sticky;
+}
+
+.employee-main-container
+{
+    width: 100%;
+    height: 100%;
+    padding: 1%;
+}
+.employee-table-container
+{
+    width: 100%;
+    height: 100%;
+}
+.employee-table
+{
+    height: 87%;
+    font-size: 15px;
+    padding: 1%;
+    display: flex;
+    overflow: auto;
+    position: sticky;
+    top: 0;
+}
+.pagination
+{
+    height: 10%;
+    display: flex;
+    padding: 2%;
+    justify-content: end;
+    justify-items: center;
+}

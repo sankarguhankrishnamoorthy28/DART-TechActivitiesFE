@@ -1,0 +1,60 @@
+<app-navbar></app-navbar>
+<div class="employee-container">
+    <div class="employee-sidebar">
+        <div>
+            <h6>Side Menu Bar</h6>
+            <li>EmployeeID</li>
+            <li>EmployeeFirstName</li>
+            <li>EmployeeLastName</li>
+            <li>EmployeeEmail</li>
+            <li>EmployeeAddress</li>
+        
+        </div>
+    </div>
+    <div class="employee-main-container">
+        <div class="employee-table-container">
+            <div class="employee-table">
+                <table class="table">
+                    <thead class="bg-primary">
+                      <tr class="employee-header">
+                        <th scope="col" (click)="toggleSort('Employee_Id')">Employee Id {{ getSortIcon('Employee_Id') }}</th>
+                        <th scope="col" (click)="toggleSort('First_Name')">First Name {{ getSortIcon('First_Name') }}</th>
+                        <th scope="col" (click)="toggleSort('Last_Name')">Last Name {{ getSortIcon('Last_Name') }}</th>
+                        <th scope="col" (click)="toggleSort('Email')">Email {{ getSortIcon('Email') }}</th>
+                        <th scope="col" (click)="toggleSort('Address')">Address {{ getSortIcon('Address') }}</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr *ngFor="let item of employees">
+                        <th scope="row">{{item.employee_Id}}</th>
+                        <td>{{item.first_Name}}</td>
+                        <td>{{item.last_Name}}</td>
+                        <td>{{item.email}}</td>
+                        <td>{{item.address}}</td>
+                      </tr>
+                      
+                    </tbody>
+                  </table>
+                  
+            </div>
+            <div class="pagination">
+                <nav aria-label="...">
+                    <ul class="pagination">
+                      <li class="page-item" [ngClass]="setDisable('first')">
+                        <a class="page-link" tabindex="-1" (click)="setPageNo(employeePost.pageNumber-1)">Previous</a>
+                      </li>
+                      <li [ngClass]="getActive(1)" class="page-item"><a class="page-link"(click)="setPageNo(1)">1</a></li>
+                      <li [ngClass]="getActive(2)" class="page-item ">
+                        <a class="page-link" (click)="setPageNo(2)">2</a>
+                      </li>
+                      <li [ngClass]="getActive(3)" class="page-item"><a class="page-link" (click)="setPageNo(3)">3</a></li>
+                      <li [ngClass]="getActive(4)" class="page-item"><a class="page-link" (click)="setPageNo(4)">4</a></li>
+                      <li class="page-item" [ngClass]="setDisable('last')" >
+                        <a class="page-link" tabindex="-1" (click)="setPageNo(employeePost.pageNumber+1)">Next</a>
+                      </li>
+                    </ul>
+                  </nav>
+            </div>
+        </div>
+    </div>
+</div>
