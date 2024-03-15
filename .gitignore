@@ -40,3 +40,9 @@ testem.log
 # System files
 .DS_Store
 Thumbs.db
+/.vs/employee-angular/FileContentIndex/02629f03-d073-4032-80e6-7a8e6ca8fff9.vsidx
+/.vs/employee-angular/config/applicationhost.config
+/.vs/employee-angular/FileContentIndex/7ded6d22-83cb-47a8-a206-cc1f6e227c03.vsidx
+/.vs/employee-angular/FileContentIndex/d745fd33-c0c4-486f-bc5c-17915158a20b.vsidx
+/.vs/slnx.sqlite
+/.vs/employee-angular/FileContentIndex/0b59000f-37cc-4860-a205-8975cb7e0049.vsidx
